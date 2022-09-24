@@ -11,6 +11,6 @@
 }
 
 .form-text-area {
-  box-sizing: bording-box;
-  width: 97%;
+  box-sizing: border-box;
+  width: 100%;
 }

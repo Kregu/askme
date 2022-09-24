@@ -16,19 +16,18 @@ class QuestionsController < ApplicationController
     redirect_to questions_path
   end
 
-  def show
-  end
+  def show; end
 
   def index
-    @questions = Question.all;
+    @question = Question.new
+    @questions = Question.all
   end
 
   def new
     @question = Question.new
   end
 
-  def edit
-  end
+  def edit; end
 
   private
 

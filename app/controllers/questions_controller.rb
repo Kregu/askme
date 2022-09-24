@@ -3,17 +3,17 @@ class QuestionsController < ApplicationController
 
   def create
     question = Question.create(question_params)
-    redirect_to question_path(question)
+    redirect_to question_path(question), notice: 'Your question created'
   end
 
   def update
     @question.update(question_params)
-    redirect_to question_path(@question.id)
+    redirect_to question_path(@question.id), notice: 'Your changes saved'
   end
 
   def destroy
     @question.destroy
-    redirect_to questions_path
+    redirect_to questions_path, notice: 'Deleted'
   end
 
   def show; end

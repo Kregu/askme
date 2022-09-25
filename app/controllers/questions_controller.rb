@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 class QuestionsController < ApplicationController
   before_action :set_question, only: %i[show edit destroy update]
 
@@ -32,7 +33,7 @@ class QuestionsController < ApplicationController
   private
 
   def question_params
-    question_params = params.require(:question).permit(:body, :user_id)
+    params.require(:question).permit(:body, :user_id)
   end
 
   def set_question
